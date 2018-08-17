@@ -57,8 +57,8 @@ package random;
 	 
 	 public static void main(String[] args) {
 	  try{
-	   File file = new File("/Users/diyangao/spring.json");
-	   InputStreamReader read = new InputStreamReader(new FileInputStream(file), "UTF-8");// ???????????,???????utf-8?????
+	   File file = new File("/path");//remember to change the path!!
+	   InputStreamReader read = new InputStreamReader(new FileInputStream(file), "UTF-8");
 	   BufferedReader bufferedReader = new BufferedReader(read);
 	   
 	   String json_fly = bufferedReader.readLine();
@@ -82,7 +82,7 @@ package random;
 	   System.out.println(out_json);
 
 	   try {
-	    File file_out = new File("/Users/diyangao/spring1.json");
+	    File file_out = new File("/path");//remember to change the path!!
 	    FileWriter fileWriter = new FileWriter(file_out);
 	    
 	    JSONArray jsonArray2 = JSONArray.parseArray(out_json);
@@ -137,7 +137,6 @@ package random;
 	    	     thresh=count(theLeftOver)/13;
 	    	    while(thresh>1){
 	    	      theLeftOver = rCutLine(theLeftOver);
-	    	    //  System.out.println(theLeftOver.toString());
 	    	       thresh=count(theLeftOver)/13;}
 	   averageCut(theLeftOver);}
 	    }//end of else
